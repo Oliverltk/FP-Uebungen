@@ -1,0 +1,17 @@
+.solid1 {
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    height: 100px;
+}
+.solid2 {
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    height: 150px;
+}
+body, h1 {
+    text-align: center;
+}

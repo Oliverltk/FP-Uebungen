@@ -1,0 +1,15 @@
+.outside {
+  height: 600px;
+  width: 400px;
+  background-color: navy;
+  position: relative;
+}
+.inside {
+  height: 30px;
+  width: 30px;
+  background-color: violet;
+  position: fixed;
+  top: 300;
+  left: 200;
+  transition: transform 2s;
+}

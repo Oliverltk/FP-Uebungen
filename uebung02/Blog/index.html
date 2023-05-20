@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <title>Blog</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html"
+        ><img src="medien/html.jpg" alt="html" width="100" height="50"
+      /></a>
+      <header>
+        <h1>Web by Step - Beispielblog</h1>
+        <p>Navigation</p>
+        <a href="artikelNeu.html" class="btn btn-primary"
+          >Neuen Artikel erstellen</a
+        >
+        <ul>
+          <li><a href="#">detailliert</a></li>
+          <li><a href="#">kompakt</a></li>
+        </ul>
+      </header>
+      <div class="row">
+        <main class="col-md-8">
+          <article>
+            <h2>Semantische Strukturierung von HTML-Seiten</h2>
+            <ul>
+              <li>
+                <a href="#">bearbeiten</a>
+              </li>
+              <li>
+                <a href="#">löschen</a>
+              </li>
+            </ul>
+            <h3>Ein kurzer Überblick über wesentliche Elemente in HTML5</h3>
+            <p>Das ist ein Paragraph.</p>
+            <div>
+              Tags
+              <ul>
+                <li>Dokument</li>
+                <li>HTML5</li>
+                <li>HTTP</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=www.google.com"
+                    target="_blank"
+                    >Teilen auf Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.twitter.com/share?url=http://www.google.com/"
+                    >Tweet</a
+                  >
+                </li>
+                <li><a href="teilenEmail.html">E-Mail</a></li>
+              </ul>
+            </div>
+          </article>
+        </main>
+        <aside class="col-md-4">
+          <form>
+            <label for="login">Login</label>
+            <input name="login" type="text" id="login"/><br />
+            <label for="passwort">Passwort</label>
+            <input class="mb-2" name="passwort" type="text" id="passwort" /><br />
+            <input class="btn btn-primary" type="submit" value="Login" /><br />
+          </form>
+          <form class="mt-2">
+            <div>
+              <label for="search"></label>
+              <input class="mb-2" type="search" id="search"/>
+              <a class="btn btn-primary" href="Suchergebnis.html">Suchen</a>
+            </div>
+          </form>
+          <ul>
+            <li><a href="monatsliste.html">März 2018 (2)</a></li>
+            <li><a href="monatsliste.html">April 2018 (1)</a></li>
+          </ul>
+          <ul>
+            <li><a href="tagliste.html">Dokument</a></li>
+            <li><a href="tagliste.html">HTML5</a></li>
+            <li><a href="tagliste.html">HTTP</a></li>
+          </ul>
+        </aside>
+      </div>
+      <footer>
+        <a href="Impressum.html">Impressum</a>
+        <a href="#">Copyright</a>
+        <a href="kontakt.html">Kontakt</a>
+      </footer>
+    </div>
+  </body>
+</html>

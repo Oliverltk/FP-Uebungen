@@ -1,0 +1,36 @@
+.days {
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+    background-color: darkred;
+}
+.recht {
+    color: red;
+}
+.fp {
+    color: purple;
+}
+.ti {
+    color: orange;
+}
+.management {
+    color: yellow;
+}
+.algebra {
+    color: blue;
+}
+.algorithmen {
+    color: lightgreen;
+}
+table {
+    padding: 10px 10px 10px 10px;
+    margin: 25px 50px 75px 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+
+}
+h1{
+    text-align: center;
+}
+

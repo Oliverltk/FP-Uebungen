@@ -1,0 +1,44 @@
+.onemin,
+.fivemin {
+  width: 15px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform-origin: 2000%;
+}
+.fivemin {
+  width: 20px;
+  height: 2px;
+  transform-origin: 1500%;
+}
+.std {
+  background-color: black;
+  width: 10px;
+  height: 150px;
+  margin-top: -150px;
+  
+  position: absolute;
+  left: 300px;
+  transform-origin: bottom;
+}
+.min {
+  background-color: black;
+  width: 10px;
+  height: 200px;
+  margin-top: -200px;
+  position: absolute;
+  left: 300px;
+  transform-origin: bottom;
+}
+.sek {
+  background-color: red;
+  width: 5px;
+  height: 200px;
+  margin-top: -200px;
+  position: absolute;
+  left: 300px;
+  transform-origin: bottom;
+}
+body {
+  margin-top: 350px;
+}
