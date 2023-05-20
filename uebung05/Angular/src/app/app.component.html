@@ -1,0 +1,73 @@
+<div class="container">
+  <header>
+    <a href="index.html"
+      ><img src="assets/medien/html.jpg" alt="html" width="100" height="50"
+    /></a>
+    <h1>Web by Step - Beispielblog</h1>
+    <p>Navigation</p>
+    <a href="artikelNeu.html" class="btn btn-primary"
+      >Neuen Artikel erstellen</a
+    >
+    <ul>
+      <li><a href="#">detailliert</a></li>
+      <li><a href="#">kompakt</a></li>
+    </ul>
+  </header>
+  <div class="row">
+    <main class="col-md-8">
+      <app-artikel></app-artikel>
+    </main>
+    <aside class="col-md-4">
+      <div>
+        <form>
+          <label for="login" class="class form-label mt-4">Login</label>
+          <input name="login" type="text" class="form-control" id="login" />
+          <br />
+          <label for="passwort" class="class form-label">Passwort</label>
+          <input
+            name="passwort"
+            type="text"
+            class="class form-control"
+            id="passwort"
+          />
+          <br />
+          <input type="submit" value="Login" class="btn btn-primary" /><br />
+        </form>
+        <form action="./Suchergebnis.html">
+          <div>
+            <label for="search"></label>
+            <input
+              name="search"
+              type="search"
+              id="search"
+              class="class form-control mt-4"
+            />
+            <input type="submit" class="btn btn-primary class mt-4" />
+          </div>
+        </form>
+        <ul>
+          <li>
+            <a href="monatsliste.html" class="class mt-2">März 2018 (2)</a>
+          </li>
+          <li>
+            <a href="monatsliste.html" class="class mt-2">April 2018 (1)</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="tagliste.html?tag=Dokument" class="fs-4">Dokument</a>
+          </li>
+          <li><a href="tagliste.html?tag=Artikel" class="fs-4">Artikel</a></li>
+          <li>
+            <a href="tagliste.html?tag=Nachricht" class="fs-6">Nachricht</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <a href="Impressum.html">Impressum</a>
+    <a href="#">Copyright</a>
+    <a href="kontakt.html">Kontakt</a>
+  </footer>
+</div>

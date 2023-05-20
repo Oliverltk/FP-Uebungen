@@ -1,0 +1,27 @@
+<article>
+  <h2>
+    <a href="artikel.html?articleid=8">{{ article?.name }}</a>
+  </h2>
+  <p>{{ article?.date }}</p>
+  <p>{{ article?.author }}</p>
+  <p>{{ article?.teaser }}</p>
+  <img title="image1" src="assets/medien/Bild1.jpeg" />
+  <p>{{ article?.content }}</p>
+  <p>
+    <a href="tagliste.html?tag=Dokument">{{ article?.tags }} </a>
+  </p>
+
+  <p>
+    <a
+      href="https://www.facebook.com/sharer/sharer.php?u=artikel.html?articleid=8"
+      >Teilen auf Facebook
+    </a>
+  </p>
+  <p>
+    <a href="http://www.twitter.com/share?url=artikel.html?articleid=8"
+      >Teilen auf Twitter
+    </a>
+  </p>
+  <p><a href="teilenEmail.html">Teilen per E-Mail </a></p>
+  <p><a href="artikelNeu.html?articleid=8">Bearbeiten</a></p>
+</article>
