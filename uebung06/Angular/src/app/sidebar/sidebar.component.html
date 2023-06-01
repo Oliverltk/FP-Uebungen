@@ -36,7 +36,7 @@
   <ul>
     <li *ngFor="let tag of tags | keyvalue">
       <a href="tagliste.html?tag=article.tags" class="fs-2" *ngIf="tag.value >= 3">{{ tag.key }}</a>
-      <a href="tagliste.html?tag=article.tags" class="fs-4" *ngIf="tag.value > 1 && tag.value < 3">{{
+      <a href="tagliste.html?tag=article.tags" class="fs-4" *ngIf="tag.value == 2">{{
         tag.key
       }}</a>
       <a href="tagliste.html?tag=article.tags" class="fs-6" *ngIf="tag.value == 1">{{

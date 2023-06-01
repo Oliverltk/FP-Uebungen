@@ -6,8 +6,3 @@ platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));
 
-/*
-var person = "Fabian";
-person =["Fabian","m"];
-console.log(person);
-*/

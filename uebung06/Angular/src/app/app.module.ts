@@ -7,6 +7,11 @@ import { ArtikelComponent } from './artikel/artikel.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ArtikellisteComponent } from './artikelliste/artikelliste.component';
+import { ArtikelEditorComponent } from './artikel-editor/artikel-editor.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { ArtikelShareComponent } from './artikel-share/artikel-share.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +20,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    ArtikellisteComponent,
+    ArtikelEditorComponent,
+    ImpressumComponent,
+    KontaktComponent,
+    ArtikelShareComponent,
    
   ],
   imports: [

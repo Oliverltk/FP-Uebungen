@@ -1,0 +1,14 @@
+header {
+  box-shadow: 2px 2px 2px white;
+  background-color: #98002e;
+  color: white;
+}
+.logo {
+  height: 48px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.options {
+  display: inline-flex;
+  margin: 20px;
+}
