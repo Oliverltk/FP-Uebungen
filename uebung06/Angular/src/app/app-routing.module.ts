@@ -3,10 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { ArtikellisteComponent } from './artikelliste/artikelliste.component';
+import { ArtikelShareComponent } from './artikel-share/artikel-share.component';
+import { ArtikelEditorComponent } from './artikel-editor/artikel-editor.component';
+import { ArtikelComponent } from './artikel/artikel.component';
 
 const routes: Routes = [
-  {path: 'impressum', component: ImpressumComponent},
-  {path: 'kontakt', component: KontaktComponent}
+  {path: 'Impressum', component: ImpressumComponent},
+  {path: 'Kontakt', component: KontaktComponent},
+  {path: 'articles', component: ArtikellisteComponent},
+  {path: '', redirectTo: '/articles', pathMatch: 'full'},
+  {path: 'share', component: ArtikelShareComponent},
+  {path: 'edit/:id', component: ArtikelEditorComponent},
+  {path: 'article/:id', component: ArtikelComponent}
+
 ];
 
 @NgModule({

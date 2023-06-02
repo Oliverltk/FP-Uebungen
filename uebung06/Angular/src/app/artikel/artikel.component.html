@@ -1,11 +1,11 @@
 <article>
   <h2>
-    <a href="artikel.html?articleid=8">{{ article?.name }}</a>
+    <a routerLink="/article/{{article?.id}}">{{ article?.name }}</a>
   </h2>
   <p>{{ article?.date }}</p>
   <p>{{ article?.author }}</p>
   <p>{{ article?.teaser }}</p>
-  <img title="image1" src="assets/medien/Bild1.jpeg" />
+  <img title="image1" src="{{article?.img}}" />
   <p>{{ article?.content }}</p>
   <p>
     <a href="tagliste.html?tag=Dokument">{{ article?.tags }} </a>
@@ -13,15 +13,15 @@
 
   <p>
     <a
-      href="https://www.facebook.com/sharer/sharer.php?u=artikel.html?articleid=8"
+      href="https://www.facebook.com/sharer/sharer.php?u=article/{{article?.id}}"
       >Teilen auf Facebook
     </a>
   </p>
   <p>
-    <a href="http://www.twitter.com/share?url=artikel.html?articleid=8"
+    <a href="http://www.twitter.com/share?url=article/{{article?.id}}"
       >Teilen auf Twitter
     </a>
   </p>
-  <p><a href="teilenEmail.html">Teilen per E-Mail </a></p>
-  <p><a href="artikelNeu.html?articleid=8">Bearbeiten</a></p>
+  <p><a routerLink="/share">Teilen per E-Mail </a></p>
+  <p><a routerLink="/edit/{{article?.id}}">Bearbeiten</a></p>
 </article>
