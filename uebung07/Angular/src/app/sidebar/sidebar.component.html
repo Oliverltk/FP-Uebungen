@@ -1,0 +1,47 @@
+<div>
+  <form>
+    <label for="login" class="class form-label mt-4">Login</label>
+    <input name="login" type="text" class="form-control" id="login" />
+    <br />
+    <label for="passwort" class="class form-label">Passwort</label>
+    <input
+      name="passwort"
+      type="text"
+      class="class form-control"
+      id="passwort"
+    />
+    <br />
+    <input type="submit" value="Login" class="btn btn-primary" /><br />
+  </form>
+  <form action="./Suchergebnis.html">
+    <div>
+      <label for="search"></label>
+      <input
+        name="search"
+        type="search"
+        id="search"
+        class="class form-control mt-4"
+      />
+      <input type="submit" class="btn btn-primary class mt-4" />
+    </div>
+  </form>
+  <ul>
+    <li>
+      <a href="monatsliste.html" class="class mt-2">März 2018 (2)</a>
+    </li>
+    <li>
+      <a href="monatsliste.html" class="class mt-2">April 2018 (1)</a>
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let tag of tags | keyvalue">
+      <a href="tagliste.html?tag=article.tags" class="fs-2" *ngIf="tag.value >= 3">{{ tag.key }}</a>
+      <a href="tagliste.html?tag=article.tags" class="fs-4" *ngIf="tag.value == 2">{{
+        tag.key
+      }}</a>
+      <a href="tagliste.html?tag=article.tags" class="fs-6" *ngIf="tag.value == 1">{{
+        tag.key
+      }}</a>
+    </li>
+  </ul>
+</div>
