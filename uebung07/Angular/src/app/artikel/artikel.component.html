@@ -14,7 +14,7 @@
   <img *ngIf="display === 'full'" title="image1" src="{{ article?.img }}" />
   <p *ngIf="display === 'full'">{{ article?.content }}</p>
   <p *ngIf="display === 'full'">
-    <a href="tagliste.html?tag=Dokument">{{ article?.tags }} </a>
+    <a *ngFor="let tag of article!.tags.split(', ')" [routerLink]="['/articles', { tag: tag }]">{{ tag }} </a>
   </p>
 
   <p *ngIf="display === 'full'">

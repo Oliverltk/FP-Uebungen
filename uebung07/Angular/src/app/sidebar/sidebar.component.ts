@@ -9,6 +9,7 @@ import { Article } from 'src/article';
 export class SidebarComponent {
   @Input() articlelist!: Article[];
   tags = new Map<string, number>();
+  query = '';
   ngOnInit() {
     for (let article of this.articlelist) {
       article.tags.split(', ').forEach((tagname) => {
