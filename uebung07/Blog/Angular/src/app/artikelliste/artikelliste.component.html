@@ -1,0 +1,25 @@
+<a [routerLink]="['/articles', createparameters('compact')]" class="me-2"
+  >Kompakt</a
+>
+<a [routerLink]="['/articles', createparameters('full')]">Standard</a>
+<p *ngIf="tag">
+  Tag:
+  <span class="badge rounded-pill text-bg-primary"
+    >{{ tag }}
+    <button [routerLink]="['/articles', removeTagParameter()]">
+      <img src="/assets/medien/closeicon.svg" alt="" /></button
+  ></span>
+</p>
+<p *ngIf="query">
+  Query:
+  <span class="badge rounded-pill text-bg-primary"
+    >{{ query }}
+    <button [routerLink]="['/articles', removeQueryParameter()]">
+      <img src="/assets/medien/closeicon.svg" alt="" /></button
+  ></span>
+</p>
+<app-artikel
+  *ngFor="let article of articlelist"
+  [article]="article"
+  [display]="display"
+></app-artikel>

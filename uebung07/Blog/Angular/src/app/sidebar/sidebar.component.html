@@ -23,7 +23,7 @@
       class="class form-control mt-4"
     />
     <a
-      [routerLink]="['/articles', { query: query }]"
+      [routerLink]="['/articles', createQueryParameters()]"
       class="btn btn-primary class mt-4"
       >Suchen</a
     >
@@ -40,19 +40,19 @@
   <ul>
     <li *ngFor="let tag of tags | keyvalue">
       <a
-        [routerLink]="['/articles', { tag: tag.key }]"
+        [routerLink]="['/articles', createTagParameters(tag.key)]"
         class="fs-2"
         *ngIf="tag.value >= 3"
         >{{ tag.key }}</a
       >
       <a
-        [routerLink]="['/articles', { tag: tag.key }]"
+        [routerLink]="['/articles', createTagParameters(tag.key)]"
         class="fs-4"
         *ngIf="tag.value == 2"
         >{{ tag.key }}</a
       >
       <a
-        [routerLink]="['/articles', { tag: tag.key }]"
+        [routerLink]="['/articles', createTagParameters(tag.key)]"
         class="fs-6"
         *ngIf="tag.value == 1"
         >{{ tag.key }}</a

@@ -12,13 +12,18 @@ import articles from 'src/data';
 })
 export class ArtikelComponent {
   @Input() article?: Article;
-  display = 'full';
+  @Input() display = 'full';
+  query: string | null = null;
 
   constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit(): void {
     this.getarticle();
     this.getdisplay();
+
+    this.route.paramMap.subscribe((paramap) => {
+      this.query = paramap.get('query');
+    });
   }
 
   getarticle(): void {
@@ -37,5 +42,15 @@ export class ArtikelComponent {
         this.display = display;
       }
     });
+  }
+
+  createParameters(tag: string) {
+    let parameters: { tag: string; query?: string } = {
+      tag: tag,
+    };
+    if (this.query !== null) {
+      parameters.query = this.query;
+    }
+    return parameters;
   }
 }

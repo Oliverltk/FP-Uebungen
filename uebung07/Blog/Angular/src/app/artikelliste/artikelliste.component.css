@@ -1,0 +1,13 @@
+.text-bg-primary {
+    background-color: #98002e !important;
+    border: 0;
+    text-align: center;
+}
+.text-bg-primary:hover {
+    background-color: #6b0121 !important;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
