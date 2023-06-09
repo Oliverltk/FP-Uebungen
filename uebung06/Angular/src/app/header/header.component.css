@@ -3,6 +3,11 @@ header {
   background-color: #98002e;
   color: white;
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo {
   height: 48px;
   margin-top: 16px;
