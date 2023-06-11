@@ -16,7 +16,7 @@ export class AppComponent {
       img: 'assets/medien/Bild1.jpeg',
       content: 'Das ist der erste Artikel.',
       tags: 'Dokument, Artikel',
-      id: '8',
+      id: '1',
     },
     {
       name: 'Artikel02',

@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <button>Push me!</button>
+      <h1>Hello</h1>
+      <div id="message"></div>
+      <button>Push me!</button>
     </div>
-</body>
-<script>
+  </body>
+  <script>
+    let message = document.getElementById("message");
+    let interval = 2000;
+    let countdown = null;
+
+    function decreaseinterval() {
+      interval = interval / 2;
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
-        
-    })
-</script>
+      countdown = setInterval(function () {
+        message.innerHTML += "PUSH THE BUTTON! ";
+        decreaseinterval();
+      }, interval);
+    });
+
+    let promise = new Promise((resolve, reject) => {
+      const button = document.querySelector("button");
+      button.addEventListener("click", resolve);
+      setTimeout(reject, 20000);
+    });
+
+    waitForClick();
+
+    async function waitForClick() {
+      try {
+        await promise;
+      } catch {
+        // wird ausgeführt, wenn nach 20Sekunden noch nicht auf den button geklickt wurde
+        message.style.color = "red";
+        return;
+      } finally {
+        clearInterval(countdown);
+      }
+      // wenn rechtzeitig au fden Button gedrückt wurde
+      message.style.color = "green";
+      
+    }
+  </script>
 </html>
