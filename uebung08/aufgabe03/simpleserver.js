@@ -42,11 +42,11 @@ if(query.order && responses.order[query.order]) {
     res.writeHead(200, { 'Content-Type': 'text/plain'});
     res.end(response);
 } else if (query.location && responses.location[query.location]) {
-    let response = responses.order[query.location];
+    let response = responses.location[query.location];
     res.writeHead(200, { 'Content-Type': 'text/plain'});
     res.end(response);
 } else if(query.starwars && responses.starwars[query.starwars]) {
-    let response = responses.order[query.starwars];
+    let response = responses.starwars[query.starwars];
     res.writeHead(200, { 'Content-Type': 'text/plain'});
     res.end(response);
 } else {
