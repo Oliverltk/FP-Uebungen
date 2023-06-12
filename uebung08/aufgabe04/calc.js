@@ -59,23 +59,9 @@ function serve(req, res) {
       res.end("Fehler: Nicht unterstützter Operator.");
       return;
   }
-  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.writeHead(200, {
+    "Content-Type": "text/plain",
+    "Access-Control-Allow-Origin": "null",
+  });
   res.end(result.toString());
-  /*
-  if (query.order && responses.order[query.order]) {
-    let response = responses.order[query.order];
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(response);
-  } else if (query.location && responses.location[query.location]) {
-    let response = responses.location[query.location];
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(response);
-  } else if (query.starwars && responses.starwars[query.starwars]) {
-    let response = responses.starwars[query.starwars];
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(response);
-  } else {
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("Fehler: Nicht unterstützte Kategorie oder Stichwort.");
-  }*/
 }

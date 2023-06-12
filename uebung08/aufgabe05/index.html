@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Calculator</title>
 </head>
 <body>
     <h1>Taschenrechner</h1>
-    <input type="number">
-    <select name="Operator" id="operators">
+    <input type="number" id="operand1" placeholder="operand1">
+    <select name="operator" id="operator">
         <option value="operator-select">Operator wählen</option>
         <option value="add">+</option>
         <option value="sub">-</option>
         <option value="mul">*</option>
         <option value="div">/</option>
     </select>
-    <input type="number">
+    <input type="number" id="operand2" placeholder="operand2">
     
-    <button>Berechnen</button>
+    <button onclick="berechnen()">Berechnen</button>
+    <div id="ergebnis"></div>
 </body>
+<script>
+    function berechnen() {
+      var operator = document.getElementById('operator').value;
+      var operand1 = document.getElementById('operand1').value;
+      var operand2 = document.getElementById('operand2').value;
+
+
+      var url = 'http://localhost:3000/' + operator + '/' + operand1 + '/' + operand2;
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            var ergebnis = xhr.responseText;
+            document.getElementById('ergebnis').textContent = ergebnis;
+          } else {
+            document.getElementById('ergebnis').textContent = 'Fehler bei der Anfrage';
+          }
+        }
+      };
+
+      xhr.open('GET', url, true);
+      xhr.send();
+    }
+  </script>
 </html>
