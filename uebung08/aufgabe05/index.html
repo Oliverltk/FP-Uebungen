@@ -18,11 +18,11 @@
     </select>
     <input type="number" id="operand2" placeholder="operand2">
     
-    <button onclick="berechnen()">Berechnen</button>
+    <button onclick="calculate()">Berechnen</button>
     <div id="ergebnis"></div>
 </body>
 <script>
-    function berechnen() {
+    function calculate() {
       var operator = document.getElementById('operator').value;
       var operand1 = document.getElementById('operand1').value;
       var operand2 = document.getElementById('operand2').value;
@@ -39,6 +39,8 @@
           } else {
             document.getElementById('ergebnis').textContent = 'Fehler bei der Anfrage';
           }
+        } else {
+          console.log(xhr);
         }
       };
 
