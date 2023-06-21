@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input type="text" id="op1" />
+    <select id="opr">
+      <option value="add">+</option>
+      <option value="sub">-</option>
+      <option value="mul">*</option>
+      <option value="div">/</option>
+    </select>
+    <input type="text" id="op2" />
+    <button id="calc">=</button>
+    <span id="result"></span><br /><br />
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttonCalc = document.getElementById("calc");
+      buttonCalc.addEventListener("click", function () {
+        var op1 = document.getElementById("op1").value;
+        var op2 = document.getElementById("op2").value;
+        var opr = document.getElementById("opr").value;
+        const result = document.getElementById("result");
+        result.text = "";
+
+        fetch("http://localhost:3000/" + opr + "/" + op1 + "/" + op2)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            result.textContent = data;
+          })
+          .catch((error) => {
+            console.log(error);
+            alert("Fehler " + error);
+          });
+      });
+    });
+  </script>
+</html>
