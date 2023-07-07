@@ -6,14 +6,16 @@
     <title>Calculator</title>
   </head>
   <body>
-    <input type="text" id="op1" />
-    <select id="opr">
+    <label for="op1"></label>
+    <input name="op1" title="Wert 1" type="text" id="op1"/>
+    <select id="opr" title="?">
       <option value="add">+</option>
       <option value="sub">-</option>
       <option value="mul">*</option>
       <option value="div">/</option>
     </select>
-    <input type="text" id="op2" />
+    <label for="op2"></label>
+    <input name="op2" title="Wert 2" type="text" id="op2" />
     <button id="calc">=</button>
     <span id="result"></span><br /><br />
   </body>
